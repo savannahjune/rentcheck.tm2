@@ -1,0 +1,1560 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE Map[]>
+<Map srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over" background-image="dotslight.png" buffer-size="256" font-directory="">
+
+<Parameters>
+  <Parameter name="attribution"><![CDATA[<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>]]></Parameter>
+  <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
+  <Parameter name="center">-73.9821,40.7154,13</Parameter>
+  <Parameter name="format">png8:m=h</Parameter>
+  <Parameter name="maxzoom">22</Parameter>
+  <Parameter name="minzoom">13</Parameter>
+  <Parameter name="name"><![CDATA[RentCheckNYCStudio]]></Parameter>
+  <Parameter name="source"><![CDATA[mapbox:///rentcheck.5d5941d9,rentcheck.92f11fdb,rentcheck.ae0f9ab2,rentcheck.8a798b43,rentcheck.4aa76582]]></Parameter>
+</Parameters>
+
+
+<Style name="new-york" filter-mode="first">
+  <Rule>
+    <PolygonSymbolizer fill-opacity="1" fill="#f7f7d9" />
+  </Rule>
+</Style>
+<Layer name="new-york"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>new-york</StyleName>  </Layer>
+
+<Style name="natural" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([name] = 'Central Park')</Filter>
+    <PolygonSymbolizer fill-opacity="0.75" fill="#8dbd75" />
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" dx="80" dy="-160" allow-overlap="true" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([name] = 'Central Park')</Filter>
+    <PolygonSymbolizer fill-opacity="0.75" fill="#8dbd75" />
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" dx="80" dy="-160" allow-overlap="true" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([name] = 'Central Park')</Filter>
+    <PolygonSymbolizer fill-opacity="0.75" fill="#8dbd75" />
+  </Rule>
+  <Rule>
+    <PolygonSymbolizer fill-opacity="0.75" fill="#8dbd75" />
+  </Rule>
+</Style>
+<Layer name="natural"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>natural</StyleName>  </Layer>
+
+<Layer name="noaa__dec_shore"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+      </Layer>
+
+<Style name="buildings" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <PolygonSymbolizer fill-opacity="1" fill="#dadada" />
+    <LineSymbolizer stroke="#c4c2c2" stroke-width="1.75" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <PolygonSymbolizer fill-opacity="1" fill="#dadada" />
+    <LineSymbolizer stroke="#c4c2c2" stroke-width="0.5" />
+  </Rule>
+</Style>
+<Layer name="buildings"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>buildings</StyleName>  </Layer>
+
+<Style name="roads" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'unsurfaced')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="1" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" spacing="10" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'unsurfaced')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="1" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'unsurfaced')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'footway')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="1" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" spacing="10" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'footway')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="1" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'footway')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'cycleway')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="1" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" spacing="10" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'cycleway')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="1" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'cycleway')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'track')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="1" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" spacing="10" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'track')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="1" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'track')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'tertiary_link')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" spacing="10" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'tertiary_link')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'tertiary_link')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'secondary_link')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" spacing="10" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'secondary_link')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'secondary_link')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'service')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" spacing="10" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'service')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'service')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'unclassified')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" spacing="10" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'unclassified')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'unclassified')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'residential')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" spacing="10" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'residential')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'residential')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'living_street')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" spacing="10" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'living_street')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'living_street')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'tertiary')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" spacing="10" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'tertiary')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'tertiary')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'secondary')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" spacing="10" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'secondary')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'secondary')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'primary')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="1.5" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" spacing="10" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'primary')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="1.5" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'primary')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="1.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'trunk_link')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="1.5" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" spacing="10" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'trunk_link')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="1.5" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'trunk_link')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="1.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'trunk')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="1.5" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" spacing="10" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'trunk')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="1.5" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'trunk')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="1.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2.5" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" spacing="10" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2.5" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'motorway')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2.5" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" spacing="10" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'motorway')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2.5" />
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([bridge] = 0) and ([type] = 'motorway')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>5000</MaxScaleDenominator>
+    <Filter>([bridge] = 0)</Filter>
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" spacing="10" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <MinScaleDenominator>5000</MinScaleDenominator>
+    <Filter>([bridge] = 0)</Filter>
+    <TextSymbolizer face-name="Futura Medium" character-spacing="2" size="12" fill="#58503d" halo-fill="#ffffff" halo-radius="2" placement="line" minimum-distance="100" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <Filter>([type] = 'unsurfaced')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <Filter>([type] = 'footway')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <Filter>([type] = 'cycleway')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <Filter>([type] = 'track')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="1" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'tertiary_link')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'secondary_link')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'service')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'unclassified')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'residential')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'living_street')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'tertiary')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <Filter>([type] = 'secondary')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([type] = 'primary')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="1.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([type] = 'trunk_link')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="1.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([type] = 'trunk')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="1.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([type] = 'motorway_link')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2.5" />
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <Filter>([type] = 'motorway')</Filter>
+    <LineSymbolizer stroke="#f9d983" stroke-width="2.5" />
+  </Rule>
+</Style>
+<Layer name="roads"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>roads</StyleName>  </Layer>
+
+<Style name="extraneighborhoods_-_Sheet1" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>50000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[name]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="extraneighborhoods_-_Sheet1"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>extraneighborhoods_-_Sheet1</StyleName>  </Layer>
+
+<Style name="kipsbay" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([AnnoLine1] = 'Kips')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" dx="-80" dy="160" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([AnnoLine1] = 'Kips')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" dx="-80" dy="160" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="kipsbay"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>kipsbay</StyleName>  </Layer>
+
+<Style name="NHoodNameCentroids" filter-mode="first">
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Murray Hill')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Murray Hill')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Murray Hill')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Gramercy')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Gramercy')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Gramercy')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] = 1)</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] = 1)</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] = 1)</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'West Village')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'West Village')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'West Village')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Washington Heights')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Washington Heights')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Washington Heights')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Upper West Side')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Upper West Side')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Upper West Side')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Upper East Side')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Upper East Side')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Upper East Side')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Tribeca')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Tribeca')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Tribeca')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Stuyvesant Town')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Stuyvesant Town')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Stuyvesant Town')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Soho')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Soho')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Soho')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Battery Park City')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Battery Park City')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Battery Park City')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Morningside Heights')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Morningside Heights')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Morningside Heights')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Midtown')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Midtown')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Midtown')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Lower East Side')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Lower East Side')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Lower East Side')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Hell’s Kitchen')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Hell’s Kitchen')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Hell’s Kitchen')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Central Harlem')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Central Harlem')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Central Harlem')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'East Harlem')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'East Harlem')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'East Harlem')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Chelsea')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Chelsea')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Chelsea')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Financial District')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Financial District')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'Financial District')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'East Village')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'East Village')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1) and ([Name] = 'East Village')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] &gt;= 1)</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] &gt;= 1)</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'East Village')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'East Village')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'East Village')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Financial District')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Financial District')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Financial District')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Gramercy')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Gramercy')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Gramercy')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Central Harlem')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Central Harlem')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Central Harlem')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Hell’s Kitchen')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Hell’s Kitchen')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Hell’s Kitchen')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Lower East Side')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Lower East Side')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Lower East Side')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Midtown')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Midtown')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Midtown')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Morningside Heights')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Morningside Heights')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Morningside Heights')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Murray Hill')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Murray Hill')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Murray Hill')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Soho')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Soho')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Soho')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Stuyvesant Town')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Stuyvesant Town')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Stuyvesant Town')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Tribeca')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Tribeca')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Tribeca')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Upper East Side')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Upper East Side')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Upper East Side')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Upper West Side')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Upper West Side')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Upper West Side')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Washington Heights')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Washington Heights')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'Washington Heights')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'West Village')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'West Village')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Stacked] = 1) and ([Name] = 'West Village')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Name] = 'West Village')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Name] = 'West Village')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Name] = 'West Village')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Name] = 'Washington Heights')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Name] = 'Washington Heights')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Name] = 'Washington Heights')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Name] = 'Upper West Side')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Name] = 'Upper West Side')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Name] = 'Upper West Side')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Name] = 'Upper East Side')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Name] = 'Upper East Side')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Name] = 'Upper East Side')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Name] = 'Tribeca')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Name] = 'Tribeca')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Name] = 'Tribeca')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Name] = 'Chelsea') and ([Stacked] = 1)</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Name] = 'Chelsea') and ([Stacked] = 1)</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Name] = 'Chelsea') and ([Stacked] = 1)</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Name] = 'Chelsea')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Name] = 'Chelsea')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Name] = 'Chelsea')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Name] = 'Soho')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Name] = 'Soho')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Name] = 'Soho')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Name] = 'Murray Hill')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Name] = 'Murray Hill')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Name] = 'Murray Hill')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Name] = 'Morningside Heights')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Name] = 'Morningside Heights')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Name] = 'Morningside Heights')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Name] = 'Midtown')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Name] = 'Midtown')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Name] = 'Midtown')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Name] = 'Lower East Side')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Name] = 'Lower East Side')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Name] = 'Lower East Side')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Name] = 'Hell’s Kitchen')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Name] = 'Hell’s Kitchen')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Name] = 'Hell’s Kitchen')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Name] = 'Central Harlem')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Name] = 'Central Harlem')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Name] = 'Central Harlem')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Name] = 'Gramercy')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Name] = 'Gramercy')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Name] = 'Gramercy')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Name] = 'Financial District')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Name] = 'Financial District')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Name] = 'Financial District')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Name] = 'East Village')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Name] = 'East Village')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Name] = 'East Village')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Name] = 'East Harlem') and ([Stacked] = 1)</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Name] = 'East Harlem') and ([Stacked] = 1)</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Name] = 'East Harlem') and ([Stacked] = 1)</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Name] = 'East Harlem')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Name] = 'East Harlem')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Name] = 'East Harlem')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Name] = 'Battery Park City') and ([Stacked] = 1)</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Name] = 'Battery Park City') and ([Stacked] = 1)</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Name] = 'Battery Park City') and ([Stacked] = 1)</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Name] = 'Battery Park City')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Name] = 'Battery Park City')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Name] = 'Battery Park City')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>12500</MaxScaleDenominator>
+    <Filter>([Name] = 'Stuyvesant Town')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="40" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>25000</MaxScaleDenominator>
+    <MinScaleDenominator>12500</MinScaleDenominator>
+    <Filter>([Name] = 'Stuyvesant Town')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="22" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>100000</MaxScaleDenominator>
+    <MinScaleDenominator>25000</MinScaleDenominator>
+    <Filter>([Name] = 'Stuyvesant Town')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="2" text-transform="uppercase" size="16" fill="#a51414" halo-fill="#ffffff" halo-radius="3" allow-overlap="true" ><![CDATA[[Name]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="NHoodNameCentroids"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>NHoodNameCentroids</StyleName>  </Layer>
+
+<Style name="nybb" filter-mode="first">
+  <Rule>
+    <MinScaleDenominator>200000</MinScaleDenominator>
+    <Filter>([BoroName] = 'Staten Island')</Filter>
+    <TextSymbolizer dx="10" dy="-130" face-name="Bebas Neue Regular" character-spacing="3" text-transform="uppercase" size="30" fill="#000000" halo-fill="rgba(255, 255, 255, 0.5)" halo-radius="2" minimum-distance="1000" ><![CDATA[[BoroName]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MaxScaleDenominator>200000</MaxScaleDenominator>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <Filter>([BoroName] = 'Staten Island')</Filter>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="3" text-transform="uppercase" size="30" fill="#000000" halo-fill="rgba(255, 255, 255, 0.5)" halo-radius="2" minimum-distance="1000" ><![CDATA[[BoroName]]]></TextSymbolizer>
+  </Rule>
+  <Rule>
+    <MinScaleDenominator>100000</MinScaleDenominator>
+    <TextSymbolizer face-name="Bebas Neue Regular" character-spacing="3" text-transform="uppercase" size="30" fill="#000000" halo-fill="rgba(255, 255, 255, 0.5)" halo-radius="2" minimum-distance="1000" ><![CDATA[[BoroName]]]></TextSymbolizer>
+  </Rule>
+</Style>
+<Layer name="nybb"
+  srs="+proj=merc +a=6378137 +b=6378137 +lat_ts=0.0 +lon_0=0.0 +x_0=0.0 +y_0=0.0 +k=1.0 +units=m +nadgrids=@null +wktext +no_defs +over">
+    <StyleName>nybb</StyleName>  </Layer>
+
+</Map>
